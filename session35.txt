@@ -1,1 +1,22 @@
 In this we will start creating with VPC
+
+and then we created the security groups for all the modules 
+
+and then we created VPN and make sure to turn the VPN
+
+and later  we have configured the databases and for checking initally configuredand created mongoDB and 
+later on remaining databases.
+
+and we are focusing on creation of app and web tier:
+
+There are two ways of creating those:
+--> If the traffic increasing the auto-scailing will create the instance accordingly
+a. When new instance cretaed, use user_data or provisioner with ansible to configur the server 
+--> When the you are the  for first time ,
+ a. First we create one instance
+ b. Provision the instance using ansible
+ c. stop the instance
+ d. Take AMI -- > 10 Mins
+ e. Update auto-scailing using  new AMI
+   Slowly old instances will be replaced by new instances
+   in future  if traffic increases, auto-scailing uses AMI to add the new instances.
