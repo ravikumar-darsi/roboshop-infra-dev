@@ -33,6 +33,7 @@ resource "aws_lb_listener" "http" {
   }
 }
 
+# creation of records
 module "records" {
   source = "terraform-aws-modules/route53/aws//modules/records"
 
