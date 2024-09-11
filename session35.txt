@@ -10,9 +10,10 @@ later on remaining databases.
 and we are focusing on creation of app and web tier:
 
 There are two ways of creating those:
---> If the traffic increasing the auto-scailing will create the instance accordingly
-a. When new instance cretaed, use user_data or provisioner with ansible to configur the server 
---> When the you are the  for first time ,
+-->(1) If the traffic increasing the auto-scailing will create the instance accordingly
+a. When new instance cretaed, use user_data or provisioner with ansible to configure the server 
+
+-->(2) When the you are the  for first time ,
  a. First we create one instance
  b. Provision the instance using ansible
  c. stop the instance
