@@ -1,0 +1,2 @@
+create catalogue target group
+the first step is to create a target group 
