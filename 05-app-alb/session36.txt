@@ -1,0 +1,26 @@
+Client ---> Business Analyst(from client side) --> Manager---> Team Leads ---> Team Members
+
+Team Manager --> listens only to Business Analyst
+Under Team Manager
+---> UI Team Lead  ----> If UI work comes, he will redirect to UI Team Lead
+---> BackEnd Team Lead --->If BackEnd work comes, he will redirect to BackEnd Team Lead
+
+UI Team:  --> One Group
+--------
+This team contains 3 Members
+
+HR ---> HR should continously check if the resources
+overload ---> Have to take another  resources
+less work ----> have to terminate
+if they resign ----> have to replace with new resources
+
+Team Manager ---> APP ALB(Application Load Balancer)
+Team MAnager Listens --> Listerns to only business analyst, port Number 80. no encryption required.
+Rules
+     if UI ---> UI team
+     if BackEnd --> BackEnd team
+
+HR---> AutoScaling
+Team/Groups ---> Target Groups
+Employess --> Instances
+Hiring Template --> Launch Template
