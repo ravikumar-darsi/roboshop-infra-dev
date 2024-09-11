@@ -48,5 +48,3 @@ daws67s.online/amazon ---> goes to amanzon project
 **Host path**
 roboshop.daws67s.online
 amanzon.daws67s.online
-
-
