@@ -1,0 +1,25 @@
+https://web-dev.daws67s.online
+
+ it will goes to DNS CNAME and there we have 
+1. we ALB   roboshop-dev-web-alb-1134442274.us-east-1.elb.amazonaws.com.
+2. 443 listerner will gets invoke
+3. rules will be evaluated and traffic will be redirected to wen Target Group Target
+4. traffic reaches the web and giv us the website.
+
+https://web-dev.daws67s.online/api/catalogue/categories
+
+1. we ALB   roboshop-dev-web-alb-1134442274.us-east-1.elb.amazonaws.com.
+2. 443 listerner will gets invoke
+3. rules will be evaluated and traffic will be redirected to wen Target Group Target
+4. traffic reaches the web and giv us the website.
+5. api/catalogue/* ---> catalogue.app-dev.daws67s.online
+
+http://catalogue.app-dev.daws67s.online
+
+1.APP ALB
+2. 80 listener will invoke
+3. rules will evaluated and traffic will be redirected to catalogue Target Group Target
+4. it will connect to and fetch products
+
+CloudFront
+---------------------------
