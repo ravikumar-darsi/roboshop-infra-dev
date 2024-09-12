@@ -1,0 +1,28 @@
+Let's say you have deployed catalogue,
+After one week you have new release/newer version of catalogue should be release, then what should be done ?
+In this scenario, new version of launch template should also be released,
+Launch Template should not be deleted.. it shouldbe upgrade to newer version....
+
+In this we started creating auto-scaling group
+
+When HR recurits a new candidate, the candidate may be moved into bench or into a project? the best case is project.. if he/she is in project.. has to mapped with a team. 
+In the same way..
+Auto-Scaling group create a new instances and then they have to be attached with a target group 
+
+Rolling Update
+---------------
+Let's say we have 4 instances and then,  4 new instances should be created and replace the old ones
+
+How this works
+One new instance created ---> once it is up, One old instance will be terminated.
+Second new instance created ---> once it is up, Second old instance will be terminated.
+
+
+First target group gets created
+instance launch
+provision
+stop
+ami
+delete instance
+launch template
+auto scaling
