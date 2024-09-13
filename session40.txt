@@ -1,0 +1,45 @@
+SG 
+----------------------------
+VPC based service, where resource is created inside VPC
+non VPC service, resources are created outside VPC
+
+1. CDB ---> WEB ALB
+web alb should accept traffic on 443 from internet
+
+2. web ALB ---> WEB
+WEB should accept traffic on 80 from web-alb
+
+3. web-alb ---> app-alb
+app-alb should accept traffic on 80 from web and vpn
+
+4. app-alb  --> catalogue
+catalogue should accept traffic on 8080 from app-alb 
+
+5. app-alb ---> cart 
+cart should accept traffic on 8080 from app-alb
+
+cart --> catalogue through app-alb
+app-alb should accept traffic on 80 from cart 
+
+all components are accepting traffic on port num 80 from app-alb 
+
+6. mongodb should accept traffic on 27017 from catalogue  
+
+
+vpc, sg, vpn , databases, web-alb, app-alb  ---> non-frequently changing components 
+
+project infra  --> we need project infra to create applications 
+
+
+let's take catalogue which is changing frequently based on requirments 
+CATALOGUE
+------------------------
+CICD
+
+CI 
+--------
+clone ---> build ---> scan the code( static scanning --> Sonar  ) ---> create artifacts  --> store the artifacts( Nexus, Jfrog, s3 ) ---> unit testing (JUnit)
+
+CD
+-------------------
+create instance ----> deploy the latest version ----> stop the instance  ---> take ami ---> refresh autoscailing 
