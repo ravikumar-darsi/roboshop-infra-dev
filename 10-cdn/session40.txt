@@ -1,0 +1,11 @@
+CloudFront
+--------------------------
+useful to cache static content
+dynamic content should not be cached 
+
+
+Let's say you are going for deployment
+------------------------
+changed some content, 
+remove cache from all edge locations
+CloudFront will get latest content  again and cache it 
