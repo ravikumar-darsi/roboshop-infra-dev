@@ -1,0 +1,26 @@
+this notes is completely related to jenkins
+we need to install terraform and integrate the aws credentials in the agent, to have clean pipeline.
+make to sure to configure aws credentials with centos user not with the root user
+
+to have color in the console output install ansiColor plugin in the jenkins dashboard.
+might have to restart to have a glimpse of it 
+
+CI
+--------
+clone the code
+unit testing
+scans
+  sonar scan
+  SAST
+  DAST
+  Open source scanning
+  docker image scanning
+dependencies install
+buid ---> zip file
+we need to push to Nexus
+
+CD 
+---------------
+deploy to DEV
+functional test cases
+publish the results 
